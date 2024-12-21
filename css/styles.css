@@ -1,0 +1,151 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://img.freepik.com/fotos-premium/proceso-negocio-gestion-operaciones-pantalla-innovacion-virtual-flujo-trabajo-resolucion-problemas-control-alta-calidad_27634-844.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Adds a blur effect behind the container */
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #191b75; /* Modern blue color */
+    cursor: pointer;
+    border-radius: 30px; /* Rounded button */
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tab-button:hover {
+    background-color: #0e212e; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.tab-button.active {
+    background-color: #141a18; /* Active button color */
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ecf0f1; /* Light background for forms */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-section {
+    padding: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #2c3e50; /* Darker button color */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #34495e; /* Darker on hover */
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Sales Section Styles */
+.sale-detail {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #3498db; /* Highlighted border for sales details */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sale-detail h3 {
+    font-size: 1.5em;
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 10px;
+}
+
+.sale-detail p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #7f8c8d; /* Subtle text color */
+}
+
+.sale-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sale-detail ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    padding: 8px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}

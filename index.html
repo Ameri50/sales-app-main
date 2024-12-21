@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Ventas</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- Agregar SweetAlert2 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="productTab">Productos</button>
+            <button class="tab-button" data-tab="customerTab">Clientes</button>
+            <button class="tab-button" data-tab="salesTab">Ventas</button> <!-- New Sales Tab Button -->
+        </div>
+        
+        <!-- Product Tab -->
+        <div id="productTab" class="tab-content active">
+            <div class="form-section">
+                <h2>Nuevo Producto</h2>
+                <form id="productForm">
+                    <input type="text" id="productName" placeholder="Nombre del producto" required>
+                    <input type="number" id="productPrice" placeholder="Precio" required>
+                    <input type="number" id="productStock" placeholder="Stock Inicial" required>
+                    <button type="submit">Agregar Producto</button>
+                </form>
+            </div>
+            <div class="list-section">
+                <h3>Productos Registrados</h3>
+                <ul id="productList"></ul>
+                <button id="deleteAllProducts">Eliminar Todos los Productos</button>
+            </div>
+        </div>
+        
+        <!-- Customer Tab -->
+        <div id="customerTab" class="tab-content">
+            <div class="form-section">
+                <h2>Nuevo Cliente</h2>
+                <form id="customerForm">
+                    <input type="text" id="customerName" placeholder="Nombre del cliente" required>
+                    <input type="email" id="customerEmail" placeholder="Email" required>
+                    <button type="submit">Agregar Cliente</button>
+                </form>
+            </div>
+            <div class="list-section">
+                <h3>Clientes Registrados</h3>
+                <ul id="customerList"></ul>
+                <button id="deleteAllCustomers">Eliminar Todos los Clientes</button>
+            </div>
+        </div>
+
+        <!-- Sales Tab -->
+        <div id="salesTab" class="tab-content">
+            <div class="form-section">
+                <h3>Nueva Venta</h3>
+                <form id="saleForm">
+                    <label for="customerSelect">Cliente:</label>
+                    <select id="customerSelect" required></select>
+
+                    <label for="productSelect">Producto:</label>
+                    <select id="productSelect" required></select>
+
+                    <input type="number" id="productQuantity" placeholder="Cantidad" required>
+
+                    <button type="button" id="addProductToSale">Agregar Producto</button>
+
+                    <h4>Productos en la Venta:</h4>
+                    <ul id="saleProductList"></ul>
+
+                    <h4>Total: <span id="saleTotal">0</span></h4>
+
+                    <button type="submit">Confirmar Venta</button>
+                </form>
+            </div>
+
+            <div class="list-section">
+                <h3>Ventas Realizadas</h3>
+                <ul id="salesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/modelsSale.js"></script>
+    <script type="module" src="js/modelsCutomer.js"></script>
+    <script type="module" src="js/modelsProducto.js"></script>
+</body>
+</html>
